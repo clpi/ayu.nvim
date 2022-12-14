@@ -269,9 +269,27 @@ hi! link diffAdded String
 "   diffComment
 
 "}}}
+
+"
+" hi Comment gui=italic
+" hi Keyword gui=bold
+" hi Function gui=bold,italic
 "
 " This is needed for some reason: {{{
-
-let &background = s:style
+" let &background = s:style
 
 " }}}
+hi Comment cterm=italic term=italic gui=italic ctermfg=11 guifg=#5C6773
+hi Keyword cterm=bold term=bold gui=bold ctermfg=14 guifg=#FFAE57
+hi Type cterm=italic,bold term=italic,bold gui=italic,bold ctermfg=10 guifg=#5CCFE6
+hi Boolean cterm=bold term=bold gui=bold ctermfg=13 guifg=#D4BFFF
+" hi Keyword gui=bold
+hi Repeat gui=italic term=italic cterm=italic  ctermfg=0 guifg=#F07178
+hi Conditional gui=bold term=bold cterm=bold  ctermfg=0 guifg=#F07178
+hi Define gui=bold,italic term=bold,italic cterm=bold,italic ctermfg=0 guifg=#F07178
+hi Define gui=bold term=bold cterm=bold ctermfg=0 guifg=#F07178
+hi PreProc gui=italic term=italic cterm=italic  ctermfg=9 guifg=#FFC44C
+let g:indentLine_char = ''
+let g:indentLine_first_char = ''
+let g:indentLine_showFirstIndentLevel = 1
+let g:indentLine_setColors = 0
